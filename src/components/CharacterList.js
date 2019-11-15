@@ -23,7 +23,7 @@ export default function CharacterList() {
   return (
     <section className="character-list">
     <Link to="/"><Button>Go Home</Button></Link> 
-    <Link to="/searching"><Button>Search</Button></Link>
+    <Link to="/search"><Button>Search</Button></Link>
 
     {character.map(element => (
       <CharacterCard
