@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Axios as Requester} from "axios";
+import Axios from "axios";
 import CharacterCard from "./CharacterCard";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ export default function CharacterList() {
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-    Requester
+    Axios
     .get('https://rickandmortyapi.com/api/character/') // making a request to get character data
     .then((response => {
       setCharacter(response.data.results);
